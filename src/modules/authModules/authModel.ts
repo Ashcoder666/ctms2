@@ -14,6 +14,7 @@ interface Iuser extends Document {
   role: Roles;
   email: string;
   company_id: Types.ObjectId;
+  password: string;
 }
 
 const userSchema: Schema<Iuser> = new Schema<Iuser>({
@@ -29,11 +30,16 @@ const userSchema: Schema<Iuser> = new Schema<Iuser>({
   email: {
     type: "string",
     required: true,
+    unique: true,
   },
   company_id: {
     type: Schema.Types.ObjectId,
-    required: true,
+    // required: true,
   },
+  password: {
+    type: "string",
+    required: true,
+  }
 });
 
 const userModel = mongoose.model<Iuser>("users", userSchema);
