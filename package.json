@@ -1,0 +1,39 @@
+{
+  "name": "ctms2",
+  "version": "1.0.0",
+  "description": "upgarded version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashcoder666/ctms2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashcoder666/ctms2/issues"
+  },
+  "homepage": "https://github.com/Ashcoder666/ctms2#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.2.0",
+    "morgan": "^1.10.0",
+    "ratelimit": "^0.0.4",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/mongoose": "^5.11.97",
+    "@types/morgan": "^1.9.9",
+    "ts-node-dev": "^2.0.0"
+  }
+}
