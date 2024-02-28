@@ -102,3 +102,5 @@
 ::ffff:127.0.0.1 - - [28/Feb/2024:09:08:14 +0000] "POST /api/register HTTP/1.1" 201 230 "-" "-"
 ::ffff:127.0.0.1 - - [28/Feb/2024:09:19:04 +0000] "POST /api/register HTTP/1.1" 201 230 "-" "-"
 ::ffff:127.0.0.1 - - [28/Feb/2024:09:19:12 +0000] "POST /api/register HTTP/1.1" 201 230 "-" "-"
+::ffff:127.0.0.1 - - [28/Feb/2024:10:08:23 +0000] "POST /api/register-company HTTP/1.1" 201 227 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [28/Feb/2024:10:08:31 +0000] "POST /api/register-company HTTP/1.1" 500 140 "-" "Thunder Client (https://www.thunderclient.com)"

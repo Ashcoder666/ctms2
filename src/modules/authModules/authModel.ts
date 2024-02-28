@@ -1,4 +1,4 @@
-import mongoose, { Types, Schema, Document } from "mongoose";
+import mongoose, { Types, Schema, Document, model } from "mongoose";
 
 enum Roles {
   manger = "MANAGER",
@@ -42,6 +42,35 @@ const userSchema: Schema<Iuser> = new Schema<Iuser>({
   }
 });
 
-const userModel = mongoose.model<Iuser>("users", userSchema);
+export const userModel = mongoose.model<Iuser>("users", userSchema);
 
-export default userModel;
+
+
+interface Icompany extends Document {
+  _id: Types.ObjectId;
+  company_name: string;
+  company_details: string;
+  company_unique_id: string;
+  owner_id: Types.ObjectId;
+}
+
+const companySchema: Schema<Icompany> = new Schema<Icompany>({
+    company_name: {
+      type: String,
+      required: true,
+    },
+    company_details:{
+      type: String,
+    },
+    company_unique_id:{
+      type: String,
+      unique: true,
+
+    },
+    owner_id:{
+      type: Schema.Types.ObjectId,
+      required: true
+    }
+})
+
+export const companyModel = mongoose.model<Icompany>('companies',companySchema)

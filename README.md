@@ -1,6 +1,6 @@
 # ctms2
 upgarded version
-/register 
+/register - done
 when registering enter company unique id , if not
 /create company / he will assigned as company owner
 /show all members in a company
