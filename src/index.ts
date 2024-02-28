@@ -8,7 +8,7 @@ import connectDatabase from "./config/dbConnection";
 import allRoutes from './modules/index'
 // import authRoute from "./modules/authModules/authRoutes"
 
-const app: Express = express();
+export const app: Express = express();
 var accessLogStream = fs.createWriteStream(path.join(__dirname, "access.log"), {
   flags: "a",
 });
@@ -26,11 +26,7 @@ connectDatabase()
 
 allRoutes(app)
 
-// app.use(authRoute)
-
-// app.get('/',((req,res)=>{
-//   console.log("hhh")
-// }))
 
 
-app.listen(port, () => console.log("listening on port " + port));
+
+export const server = app.listen(port, () => console.log("listening on port " + port));

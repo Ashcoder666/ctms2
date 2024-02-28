@@ -3,12 +3,12 @@ import mongoose, { ConnectOptions } from "mongoose";
 
 mongoose.set("strictQuery", false);
 
-const connectDatabase = () => {
+const connectDatabase = async() => {
   try {
     if (!DB_URL) {
       throw new Error("DB_URL is not defined.");
     }
-    mongoose.connect(DB_URL, {
+    await mongoose.connect(DB_URL, {
       useNewUrlParser: true,
     } as ConnectOptions);
 

@@ -4,9 +4,8 @@
   "description": "upgarded version",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --detectOpenHandles test/modules/auth/test.ts",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
-    
   },
   "repository": {
     "type": "git",
@@ -32,8 +31,13 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
     "@types/mongoose": "^5.11.97",
     "@types/morgan": "^1.9.9",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4",
+    "ts-jest": "^29.1.2",
     "ts-node-dev": "^2.0.0"
   }
 }
